@@ -1,0 +1,56 @@
+{
+  "name": "whatsapp-dp-optimizer",
+  "version": "1.0.0",
+  "description": "Web app to resize and optimize WhatsApp profile pictures",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "npx http-server src",
+    "build": "mkdir -p dist && cp -r src/* dist/",
+    "lint": "eslint src/js/*.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "whatsapp",
+    "image",
+    "resize",
+    "optimizer"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "gh-pages": "^6.2.0",
+    "http-server": "^14.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  }
+}
